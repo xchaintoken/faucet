@@ -36,7 +36,7 @@ export default class ReCaptcha {
     resetV2Captcha = (widgetID: any, index: number = 0) => {
         const v2CaptchaContainer = document.getElementsByClassName('v2-recaptcha')[index] as HTMLElement
         if(v2CaptchaContainer) {
-            if(widgetID.get(index) || widgetID.get(index) == 0) {
+            if(widgetID.get(index) || widgetID.get(index) === 0) {
                 window.grecaptcha.reset(widgetID.get(index))
             }
             v2CaptchaContainer.style.display = "none"
@@ -46,7 +46,7 @@ export default class ReCaptcha {
     loadV2Captcha = (v2siteKey: string, widgetID: any, index: number = 0, reload: boolean = false) => {
         this.resetV2Captcha(widgetID, index)
         const v2CaptchaContainer = document.getElementsByClassName('v2-recaptcha')[index] as HTMLElement
-        if((widgetID.get(index) || widgetID.get(index) == "0") && !reload) {
+        if((widgetID.get(index) || widgetID.get(index) === "0") && !reload) {
             const v2CaptchaContainer = document.getElementsByClassName('v2-recaptcha')[index] as HTMLElement
             if(v2CaptchaContainer) {
                 v2CaptchaContainer.style.display = "block"

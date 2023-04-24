@@ -1,17 +1,17 @@
-import FaucetForm from './components/FaucetForm'
-import Contribute from './components/Contribute'
+import FaucetForm from './components/FaucetForm';
 
-import axios, { config } from './configure'
-import './App.css'
+import axios, { config } from './configure';
+import './App.css';
 
 function App() {
   return (
     <div className="app">
-      <FaucetForm axios = {axios} config = {config}/>
-
-      <Contribute/>
+      <FaucetForm
+        axios={axios}
+        config={config}
+      />
     </div>
-  )
+  );
 }
 
-export default App
+export default App;

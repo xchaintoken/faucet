@@ -5,7 +5,7 @@ import path from 'path'
 import dotenv from 'dotenv'
 import { BN } from 'avalanche'
 
-import { RateLimiter, VerifyCaptcha, parseURI } from './middlewares'
+import { RateLimiter, parseURI } from './middlewares'
 import EVM from './vms/evm'
 
 import {
@@ -49,8 +49,6 @@ new RateLimiter(app, [
         return addr.toUpperCase()
     }
 })
-
-const captcha: VerifyCaptcha = new VerifyCaptcha(app, process.env.CAPTCHA_SECRET!, process.env.V2_CAPTCHA_SECRET!)
 
 let evms = new Map<string, EVMInstanceAndConfig>()
 
@@ -98,7 +96,7 @@ erc20tokens.forEach((token: ERC20Type, i: number): void => {
 })
 
 // POST request for sending tokens or coins
-router.post('/sendToken', captcha.middleware, async (req: any, res: any) => {
+router.post('/sendToken', async (req: any, res: any) => {
     const address: string = req.body?.address
     const chain: string = req.body?.chain
     const erc20: string | undefined = req.body?.erc20

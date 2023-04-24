@@ -8,7 +8,7 @@ export const addNetwork = async (config: any): Promise<void> => {
     if(!config) {
         return
     }
-    if(window.ethereum == undefined) {
+    if(window.ethereum === undefined) {
         window.open('https://metamask.io/download', '_blank')
     }
 
@@ -34,7 +34,7 @@ export const addAsset = async (config: any): Promise<void> => {
     if(!config) {
         return
     }
-    if(window.ethereum == undefined) {
+    if(window.ethereum === undefined) {
         window.open('https://metamask.io/download', '_blank')
     }
 
@@ -54,7 +54,7 @@ export const addAsset = async (config: any): Promise<void> => {
 }
 
 export const connectAccount = async (updateAddress: any, showPopup = true) => {
-    if(window.ethereum == undefined) {
+    if(window.ethereum === undefined) {
         showPopup && window.open('https://metamask.io/download', '_blank')
         return
     }
