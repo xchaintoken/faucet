@@ -18,7 +18,6 @@
             "CHAINID": 911,
             "EXPLORER": "https://explorer.xchain.finance/",
             "IMAGE": "https://www.xchain.finance/assets/images/fav-icon/icon.png",
-            "MAX_PRIORITY_FEE": "2000000000",
             "MAX_FEE": "10000000",
             "DRIP_AMOUNT": 100,
             "RATELIMIT": {
