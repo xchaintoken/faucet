@@ -15,12 +15,12 @@
             "NAME": "XChain Testnet",
             "TOKEN": "XCHAIN",
             "RPC": "https://testnet.xchain.finance/ext/bc/XChain/rpc",
-            "CHAINID": 48956,
+            "CHAINID": 911,
             "EXPLORER": "https://explorer.xchain.finance/",
             "IMAGE": "https://www.xchain.finance/assets/images/fav-icon/icon.png",
             "MAX_PRIORITY_FEE": "2000000000",
-            "MAX_FEE": "100000000000",
-            "DRIP_AMOUNT": 10,
+            "MAX_FEE": "10000000",
+            "DRIP_AMOUNT": 100,
             "RATELIMIT": {
                 "MAX_LIMIT": 1,
                 "WINDOW_SIZE": 1440
